@@ -1,40 +1,27 @@
 let savedMail = "lala@gmail.com";
 let savedPass = "123456";
 
-function mail (){
-
-    let mail = false;
-
-    for(let i = 2; i >= 0 ; i--){
-        let userMail = prompt ("Ingresa tu mail");
-        if (userPMail === savedMail){
-            alert ("Binevenid@");
-            ingresar = true;
-            break;
-        }else{
-            alert ("Error. Envianos un mail a babyboom@gmail.com para crear una cuenta")
-        }
-    }
-
-    return mail;
-}
-
-mail ();
-
-//IF MAIL ES TRUE, SIGO A LOGIN
-
 function login (){
 
     let ingresar = false;
 
     for(let i = 2; i >= 0 ; i--){
-        let userPass = prompt ("Ingresa tu contraseña. Tenes " +(i+1)+ " intentos");
-        if (userPass === savedPass){
-            alert ("Binevenid@");
-            ingresar = true;
+        let userMail = prompt ("Ingresa tu email");
+        if (userMail === savedMail){
+            for(let j = 2; j >= 0 ; j--){
+                let userPass = prompt ("Ingresa tu contraseña. Tenes " +(j+1)+ " intentos");
+                //console.log(ingresar)
+                if (userPass === savedPass){
+                    alert ("Binevenid@");
+                    ingresar = true;
+                    break;
+                }else{
+                    alert ("Error. Te quedan " + j + " intentos")
+                }
+            }
             break;
         }else{
-            alert ("Error. Te quedan " +i+ " intentos")
+            alert ("Error. Envianos un mail a babyboom@gmail.com para crear una cuenta")
         }
     }
 
@@ -46,7 +33,7 @@ if(login()){
     let carrito = 2000;
 
     let opcion = prompt ("Elegi una opción: \n1 - Ver carrito \n2 - Agregrar donación a la casa cuna \n3 - Vaciar carrito \n - Presioná X para salir");
-
+    
     while (opcion !="X" && opcion!="x"){
         switch(opcion){
             case "1":
