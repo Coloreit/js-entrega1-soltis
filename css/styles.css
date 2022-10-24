@@ -18,17 +18,13 @@ body {
 
 /*Header*/
 .logo-principal {
-  font-size: 20px;
-  color: #34c4cc;
+  display: none;
+  visibility: hidden;
 }
 
 .logo-principal img {
-  height: 200px;
-  width: auto;
-  border-radius: 20px;
-  box-shadow: 7px 7px 19px -4px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 7px 7px 19px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 19px -4px rgba(0, 0, 0, 0.75);
+  display: none;
+  visibility: hidden;
 }
 
 .logo-principal h1 {
